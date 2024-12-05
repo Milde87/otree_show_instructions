@@ -1,0 +1,22 @@
+{{ block styles }}
+    <link href="{{ static 'global/css/popup-instructions.css' }}" rel="stylesheet"/>
+{{ endblock }}
+
+{{ block scripts }}
+    <script src="{{ static 'global/js/popup-instructions.js' }}"></script>
+{{ endblock }}
+
+{{ block title }}
+    Instructions 2 <hr>
+{{ endblock }}
+
+{{ block content }}
+
+    <div style="position: absolute; top: 30px; right: 30px">
+      {{ include "_static/global/popup.html" with status=1 & popup=1 }}
+    </div>
+
+    {{ include 'Instructions/content/02Task.html' with popup=0 }}
+    {{ next_button }}
+
+{{ endblock }}
